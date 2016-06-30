@@ -8,7 +8,8 @@ if [ -n "$1" ]; then
 
 		count=0
 		array=()
-
+		
+		# TODO fix fill array. 
 		while read line; do
 			echo $line
 			array[$count]=$line
@@ -16,7 +17,8 @@ if [ -n "$1" ]; then
 		done < $2 | sort
 
 		echo ${#array[*]}
-
+		
+		# write to file instead of console.
 		echo "{"
 		for (( i = 1; i < ${#array[*]}; i++ )); do
 			kappa=$(echo ${array[$i]} | tr -d "\'" |  tr -d "=")
