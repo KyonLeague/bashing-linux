@@ -1,5 +1,0 @@
-{
-	"spark.master": "spark://mysparkcluster:7077",
-	"spark.akka.frameSize": "64",
-	"spark.executor.cores": "4"
-}
